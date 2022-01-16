@@ -1,0 +1,300 @@
+/* ---------------
+Google fonts
+---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* ---------------
+Universal styles
+---------------- */
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 1s ease-out;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: rgb(63, 63, 63);
+}
+.text_center {
+  text-align: center;
+  margin: 100px 0 30px 0;
+}
+
+header,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* -------------------------
+  Navigation menu styles
+------------------------- */
+
+nav {
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .dropdown {
+  display: none;
+}
+
+nav .logo,
+.fas {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 15px;
+}
+nav .logo:hover,
+.fas:hover,
+.fab:hover {
+  color: #d40063;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  color: black;
+  list-style: none;
+  text-decoration: none;
+  padding: 19px 25px;
+}
+
+.menu ul li a:hover {
+  background-color: #80808048;
+  color: #d40063;
+}
+
+/* -------------------------
+  Main body styles
+------------------------- */
+section {
+  padding: 0 15px;
+}
+
+button,
+#buttons {
+  color: white;
+  background-color: #d40063;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+button .fa-arrow-right {
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  font-size: 15px;
+}
+button:hover,
+#buttons:hover {
+  background-color: #950046;
+}
+
+.banner {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  align-items: center;
+  margin-bottom: 100px;
+  justify-items: center;
+}
+
+.banner_left p {
+  margin: 30px 0;
+}
+
+.banner_img {
+  /* width: 80%;
+  height: 80%; */
+  background-color: #7a7a7a4f;
+  padding: 15px;
+  border-radius: 50%;
+  outline: 30px solid #cecece59;
+}
+
+.banner_img img {
+  max-width: 300px;
+}
+.banner_img img:hover {
+  transform: rotate(360deg) scale(1.4);
+  transition: transform 1s ease-in-out;
+}
+/* -------------------------
+ Brand section styles
+------------------------- */
+.brands,
+.more {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.brands img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 0 20px;
+}
+
+/* -------------------------
+  Products style
+------------------------- */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 30px;
+}
+
+.product {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgb(197, 197, 197);
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.product h2 {
+  margin: 10px 0;
+  font-weight: normal;
+}
+.stars {
+  display: flex;
+  align-items: center;
+}
+.stars p {
+  margin-left: 10px;
+  font-weight: bolder;
+}
+.stars .fas {
+  margin: 0;
+  padding: 0;
+  color: orange;
+  font-size: 1em;
+}
+
+/* -------------------------
+  User styles
+------------------------- */
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 30px;
+  margin: 50px 0;
+}
+/* .user > .subscrib {
+  margin-right: 50px;
+} */
+.user > .subscrib p {
+  margin: 30px 0;
+}
+.user > .contacts {
+  width: -webkit-fill-available;
+}
+#sub_form {
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px -10px;
+  background-color: white;
+}
+
+#email {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 10px 0;
+}
+
+#fullname,
+#youremail {
+  width: 50%;
+  padding: 10px 5px;
+}
+
+#textarea {
+  width: 90%;
+  padding: 5px 0 0 5px;
+}
+/* -------------------------
+  Footer styles
+------------------------- */
+footer {
+  color: white;
+  background-color: rgb(0, 0, 56);
+  padding: 40px;
+  text-align: center;
+}
+
+footer p {
+  font-size: small;
+  margin: 5px 0;
+}
+footer .fab {
+  background-color: #80808038;
+  margin: 5px;
+  padding: 5px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* -------------------------
+  Media quries
+------------------------- */
+@media only screen and (max-width: 992px) {
+  nav .dropdown {
+    display: flex;
+    align-items: center;
+  }
+  .menu ul {
+    display: none;
+  }
+  .banner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+  .user {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  nav .logo,
+  .fas {
+    padding: 0 5px;
+  }
+
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .logo h1 {
+    font-size: 1em;
+  }
+}
